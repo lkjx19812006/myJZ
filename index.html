@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <link rel="stylesheet" href="./css/common/mui.min.css">
+    <link rel="stylesheet" href="./css/iconfont/iconfont.css">
+    <link rel="stylesheet" href="./css/common/base.css">
+    <style>
+        /* home 列表开始 */
+
+        .content {
+            padding: 0 5px;
+        }
+
+        .item {
+            box-shadow: 0 1px 4px #999;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        .item .title {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            color: #FF7B00;
+            height: 36px;
+            line-height: 36px;
+            background: #e0e0e0;
+            border-bottom: 1px solid #d0d0d0;
+        }
+
+        .item .count {
+            background: #f0f0f0;
+        }
+
+        .item .count>div {
+            flex: 0 0 auto;
+            width: 50%;
+            padding: 5px 0;
+            text-align: center;
+        }
+
+        .item .count .tit {
+            padding-bottom: 5px;
+        }
+
+        .item .count .left {
+            border-right: 1px solid #d0d0d0;
+            color: #FFC400;
+        }
+
+        .item .count .right {
+            color: #FFA6A6;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 底部tab nav -->
+    <nav class="mui-bar mui-bar-tab">
+        <a class="mui-tab-item mui-active" href="#home">
+            <span class="mui-icon iconfont icon-shouye"></span>
+            <span class="mui-tab-label">首页</span>
+        </a>
+        <a class="mui-tab-item" href="#list">
+            <span class="mui-icon iconfont icon-liebiao"></span>
+            <span class="mui-tab-label">列表</span>
+        </a>
+        <a class="mui-tab-item" href="#charts">
+            <span class="mui-icon iconfont icon-tubiao"></span>
+            <span class="mui-tab-label">图表</span>
+        </a>
+        <a class="mui-tab-item" href="#self">
+            <span class="mui-icon iconfont icon-wode"></span>
+            <span class="mui-tab-label">我的</span>
+        </a>
+    </nav>
+    <div id="box">
+        <my-page-view style="padding-bottom: 50px;padding-top: 130px" id="home" class="mui-control-content mui-active">
+            <my-header slot="header"></my-header>
+            <my-home-item slot="content"></my-home-item>
+        </my-page-view>
+        <div id="list" class="mui-control-content">
+            <div class="title">这是div模式选项卡中的第2个子页面</div>
+        </div>
+        <div id="charts" class="mui-control-content">
+            <div class="title">这是div模式选项卡中的第3个子页面</div>
+        </div>
+        <div id="self" class="mui-control-content">
+            <div class="title">这是div模式选项卡中的第4个子页面</div>
+        </div>
+    </div>
+    <script src="./libs/mui.min.js"></script>
+    <script src="./libs/vue.min.js"></script>
+    <script src="./components/pageView.js"></script>
+    <script src="./components/common.js"></script>
+    <script>
+        var vm = new Vue({
+            el: '#box',
+            data: function () {
+                return {}
+            },
+            methods: {
+
+            }
+        })
+    </script>
+</body>
+
+</html>

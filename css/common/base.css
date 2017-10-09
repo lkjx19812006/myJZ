@@ -1,0 +1,111 @@
+.padding-10{
+    padding: 10px;
+}
+/* 绝对定位 */
+.position-absolute {
+    position: absolute;
+}
+/* 绝对定位居中 */
+.position-absolute-center{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 1;
+}
+/* 弹性盒子 水平主轴 */
+.display-flex-row-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items:center;
+}
+/* 弹性盒子 垂直主轴 */
+.display-flex-column-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items:center;
+}
+
+/* home 页面 头部 公共样式 */
+.my-header-home {
+    position: fixed;
+    top: 0;
+    margin: auto;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 30px;
+}
+
+.my-header-home-img {
+    width: 100%;
+    height: 100px;
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
+    z-index: 1;
+}
+
+.my-header-home-wrap {
+    background: transparent;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+.my-header-home-wrap .gross {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #FFD000;
+    text-shadow: 0 0 10px #FFD000;
+}
+
+.my-header-home-wrap .gross .num {
+    font-size: 14px;
+}
+
+.my-header-home-wrap .gross-charge {
+    color: #FFA6A6;
+    text-shadow: 0 0 10px #FFA6A6;
+}
+
+.my-header-home-wrap .take-notes {
+    flex: 0 0 auto;
+    height: 80px;
+    width: 80px;
+    margin: 0 20px;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 170, 0, 0.95);
+    color: #E4AC6D;
+    background: rgba(240, 240, 240, 0.3)
+}
+
+.my-header-home-wrap .take-notes .icon-jiyibi {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 30px;
+    color: #E4AC6D;
+}
+
+.my-header-home .total {
+    width: 100%;
+    line-height: 30px;
+    text-align: center;
+    bottom: -25px;
+    margin: auto;
+    z-index: 3;
+    color: #FF8800;
+    text-shadow: 0 0 10px #FFD000;
+}
